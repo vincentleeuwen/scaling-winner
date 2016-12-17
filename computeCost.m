@@ -6,17 +6,34 @@ function J = computeCost(X, y, theta)
 % Initialize some useful values
 m = length(y); % number of training examples
 
-% You need to return the following variables correctly 
-J = 0;
+% You need to return the following variables correctly
+% J = 0;
 
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
 
+% The hypothesis (also called the prediction) is simply the product of X and theta.
+% So your first line of code is...
+h = X * theta;
 
+% error = {the difference between h and y}
+error = h - y;
 
+% disp(error);
+% disp(m);
 
+% error_sqr = {use what you have learned}
+error_sqr = error.^2;
+
+% disp(error_sqr);
+
+% J = {multiply 1/(2*m) times the sum of the error_sqr vector}
+J = sum(error_sqr) / (2*m);
+
+% disp('J is:');
+% disp(J);
 % =========================================================================
 
 end
