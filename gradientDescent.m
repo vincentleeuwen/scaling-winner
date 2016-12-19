@@ -25,12 +25,12 @@ for iter = 1:num_iters
     theta_change = (X' * errors) * alpha * (1/m);
     theta = theta - theta_change;
 
-    disp('Theta:');
-    disp(theta);
+    % disp('Theta:');
+    % disp(theta);
 
     cost = computeCost(X, y, theta);
-    disp('Cost:');
-    disp(cost);
+    % disp('Cost:');
+    % disp(cost);
 
     % ============================================================
 
